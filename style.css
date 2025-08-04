@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-image: url(./img/chimpanze.jpg);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    gap: 16px;
+}
+
+.container button {
+    padding: 12px;
+}
+
+.container #auto {
+    padding: 12px;
+    animation: slider 12s infinite, fade 4s;
+}
+
+.container input {
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@keyframes slider {
+    0%,
+    33% {
+        background-image: var(--bg-image);
+    }
+    34%,
+    66% {
+        background-image: var(--bg-image);
+    }
+    67%,
+    100% {
+        background-image: var(--bg-image);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
